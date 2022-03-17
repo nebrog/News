@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">News</string>
+    <string name="app_name">Новостная лента</string>
+    <string name="error_text">Что-то пошло не так, проверьте подключение к интернету</string>
+    <string name="refresh">Обновить</string>
 </resources>
