@@ -1,5 +1,7 @@
 package com.example.news.data;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +37,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
                 .load(news.image)
                 .centerCrop()
                 .into(holder.image);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(news.url));
+                holder.itemView.getContext().startActivity(browserIntent);
+            }
+        });
     }
 
     @NonNull
