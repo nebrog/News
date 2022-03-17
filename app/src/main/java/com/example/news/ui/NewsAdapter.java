@@ -1,4 +1,4 @@
-package com.example.news.data;
+package com.example.news.ui;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -24,7 +24,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
     public void setNews(List<NewsPOJO> newsPOJOList){
         newsPOJOS = newsPOJOList;
         notifyDataSetChanged();
-
     }
 
     @Override

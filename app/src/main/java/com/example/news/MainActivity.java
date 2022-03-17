@@ -12,9 +12,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.news.data.NewsAdapter;
 import com.example.news.data.api.NewsAPI;
 import com.example.news.data.models.ArticlesPOJO;
+import com.example.news.ui.NewsAdapter;
 
 import io.reactivex.SingleObserver;
 import io.reactivex.android.schedulers.AndroidSchedulers;
