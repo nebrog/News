@@ -30,10 +30,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         NewsPOJO news = newsPOJOS.get(position);
         holder.title.setText(news.title);
         holder.description.setText(news.description);
-        holder.url.setText(news.url);
         Glide
                 .with(holder.image)
                 .load(news.image)
+                .centerCrop()
                 .into(holder.image);
     }
 
@@ -55,14 +55,12 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.NewsViewHolder
         TextView title;
         ImageView image;
         TextView description;
-        TextView url;
 
         public NewsViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.title);
             image = itemView.findViewById(R.id.image);
             description = itemView.findViewById(R.id.description);
-            url = itemView.findViewById(R.id.url);
         }
     }
 }
